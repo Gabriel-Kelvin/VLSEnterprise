@@ -83,6 +83,26 @@ body {
     align-items: center;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
 .nav-brand .brand-name {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -519,7 +539,9 @@ section {
 }
 
 .material-image-placeholder {
+    height: 180px;
     min-height: 180px;
+    max-height: 180px;
     background: var(--bg-light);
     border-radius: 8px;
     border: 1px dashed var(--border-color);
@@ -527,7 +549,15 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     transition: all var(--transition-base);
+}
+
+.material-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .material-card:hover .material-image-placeholder {
